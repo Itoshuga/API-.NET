@@ -2,7 +2,7 @@
 
 ## Lancer le Projet
 Le projet ne se lançant pas sur le profil https, il faut le forcer avec la commande suivante :   
-`dotnet run --launch-profile https`
+- `dotnet run --launch-profile https`
 
 ### Quel est la diffèrence entre une classe abstraite et une interface ? 
 Une classe abstraite est une classe dont toutes les méthodes n'ont pas été implémanté. Elle n'est donc pas instanciable et permet de factoriser du code. De plus une classe devient abstraite dès lors qu'elle contient un seul element abstrait en son sein.  

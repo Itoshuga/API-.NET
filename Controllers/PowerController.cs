@@ -25,5 +25,15 @@ public class PowerController : ControllerBase {
         await _context.SaveChangesAsync();
         return Ok("Le pouvoir " + unPouvoir.Name + " a bien été créé.");
     }
+
+    // Supprime un Pouvoir
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<List<Power>>> DeletePower(int id)
+    {
+        var powerToDelete = await _context.Powers.FindAsync(id);
+        _context.Remove(powerToDelete);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
     
 }
