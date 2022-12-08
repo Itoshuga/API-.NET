@@ -31,6 +31,13 @@ public class HeroController : ControllerBase {
         return Ok(myHero);
     }
 
+    [HttpGet]
+    public async Task<ActionResult<List<Hero>>> GetHeroByName(string name) {
+        var heroesList = await _context.Heroes.ToListAsync();
+        var myHero = heroesList.Find(myHero => myHero.Name == name);
+        return Ok(myHero);
+    }   
+
     // Créer un Nouveau Hero
     [HttpPost]
     public async Task<ActionResult<List<Hero>>> CreateHero(Hero unHero) {
@@ -60,5 +67,4 @@ public class HeroController : ControllerBase {
         await _context.SaveChangesAsync();
         return NoContent();
     }
-
 }

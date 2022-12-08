@@ -9,4 +9,5 @@ public class ApplicationDbContext : DbContext { // Hot Copy de la bdd
 
     public DbSet<Hero> Heroes {get; set;}
     public DbSet<Power> Powers {get; set;}
+    public DbSet<Organization> Organizations {get; set;}
 }
