@@ -25,6 +25,24 @@ public class HeroController : ControllerBase {
         return Ok(myHeroesList);
     }
 
+    // Affiche les Héros et leur pouvoirs
+    // [HttpGet]
+    // //https://stackoverflow.com/questions/51004760/asp-net-web-api-join-two-tables-to-make-an-array-of-objects
+    // public IQueryable<Object> GetAllHeroes() {
+    //     return _context.Heroes.Include(hero => hero.Power).Select(hero => new {
+    //         Id = hero.Id,
+    //         Name = hero.Name,
+    //         FirstName = hero.FirstName,
+    //         LastName = hero.LastName,
+    //         Place = hero.Place,
+    //         Powers = hero.Power.Select(power => new {
+    //             Id = power.Id,
+    //             Name = power.Name,
+    //             Description = power.Description
+    //         })
+    //     });
+    // }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<List<Hero>>> GetHeroById(int id) {
         var myHero = await _context.Heroes.FindAsync(id);

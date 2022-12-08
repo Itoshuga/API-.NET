@@ -23,7 +23,7 @@ public class PowerController : ControllerBase {
     public async Task<ActionResult<List<Hero>>> CreatePower(Power unPouvoir) {
         _context.Powers.Add(unPouvoir);
         await _context.SaveChangesAsync();
-        return Ok("Le Héro " + unPouvoir.Name + " a bien été créé.");
+        return Ok("Le pouvoir " + unPouvoir.Name + " a bien été créé.");
     }
     
 }
