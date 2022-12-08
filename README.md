@@ -53,3 +53,37 @@ Si on se fit à a cette exemple de classe abstraite, la classe Shape qui est une
 
 ### Expliquer pourquoi on a des portées dans les langages et à quoi ça sert ? Donner un exemple concret de pourquoi c’est utile.
 Les niveaux d'accès en C# permettent de contrôler l'accessibilité des membres d'une classe et de protéger les données et les fonctionnalités de la classe, des classes qui ne devraient pas y accéder. Ils peuvent également être utilisés pour cacher les détails d'implémentation d'une classe derrière une interface publique.
+
+## Retourner par la méthode GetAllHeroesAndPower()
+```JSON
+[
+  {
+    "id": 1,
+    "name": "Hulk",
+    "firstName": "Bruce",
+    "lastName": "Banner",
+    "place": "New York",
+    "powers": [
+      {
+        "id": 1,
+        "name": "Titan Vert",
+        "description": "Force et résistance physique surhumaines quasi illimitées."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Spider-Man",
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "place": "New York",
+    "powers": [
+      {
+        "id": 2,
+        "name": "Spider-Sense",
+        "description": "Il permet de détecter le danger avant qu'il ne se produise et avertit l'utilisateur en un rien de temps."
+      }
+    ]
+  }
+]
+```
